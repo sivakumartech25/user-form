@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <BrowserRouter>
       <div className={classes.App}>
-        <div className={classes.ContactData}>
+        <div>
           <Route path="/" exact component={LoginFrom}/>
           <Route path="/list" exact component={EmployeeList}/>
         </div> 

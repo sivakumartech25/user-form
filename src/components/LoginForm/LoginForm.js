@@ -21,23 +21,23 @@ class LoginForm extends Component{
         return <Redirect to='/list'/>
     } else {
     let form = ( 
-            <form name="loginform">
+            <form name="loginform" className={classes.form}>
                 <label className={classes.Label}>USERNAME:</label>
                 <input 
-                className={classes.inputElement}
+                className={classes.input}
                 type="email" 
                 name="email" 
                 onChange={event => this.setState({email: event.target.value})} />
-                <label>Password:</label>
+                <label>PASSWORD:</label>
                 <input 
-                className={classes.inputElement}
+                className={classes.input}
                 type="password" 
                 name="password" 
                 onChange={event => this.setState({password: event.target.value})}/>
-                <input type="submit" value="LOGIN" />
+                <button type="submit" className={classes.button}>LOGIN</button>
                 { isLoginPending && <div>Please Wait...</div> }
                 { isLoginSuccess && <div>success</div> }
-                { loginError && <div>{loginError.message}</div>}
+                { loginError && <div style={{color:"red"}}>{loginError.message}</div>}
             </form>   
     );
     return(        

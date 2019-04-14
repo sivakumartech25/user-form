@@ -1,11 +1,12 @@
 import React from "react";
+import classes from "./EmployeeData.css";
 
 export default function EmployeeData (props){
     return(
-        <table>
+        <table className={classes.table}>
             <thead>
                 <tr>
-                    <th>id</th>
+                    <th className={classes.th}>id</th>
                     <th>name</th>
                     <th>age</th>
                     <th>gender</th>
@@ -13,11 +14,11 @@ export default function EmployeeData (props){
                     <th>phoneNo</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className={classes.tbody}>
                {
                    props.data.user.map(row => (
                     <tr>
-                        <td>{row.id}</td>
+                        <td className={classes.td}>{row.id}</td>
                         <td>{row.name}</td>
                         <td>{row.age}</td>
                         <td>{row.gender}</td>
